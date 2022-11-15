@@ -1,6 +1,6 @@
 package lotto;
 
-import camp.nextstep.edu.missionutils.Randoms;
+import java.util.Collections;
 import java.util.List;
 
 import static camp.nextstep.edu.missionutils.Randoms.pickUniqueNumbersInRange;
@@ -11,12 +11,12 @@ public class Numbers {
     private final int COUNT = 6;
 
     public List<Integer> createRandomNumbers() {
-        return pickUniqueNumbersInRange(STARTING_NUMBER, END_NUMBER, COUNT);
+        return sortNumbers(pickUniqueNumbersInRange(STARTING_NUMBER, END_NUMBER, COUNT));
     }
 
-    public List<Integer> sortNumbers() {
-
-        return null;
+    public List<Integer> sortNumbers(List<Integer> randomNumbers) {
+        Collections.sort(randomNumbers);
+        return randomNumbers;
     }
 
     public void validate() {
