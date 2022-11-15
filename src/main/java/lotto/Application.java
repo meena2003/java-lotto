@@ -1,15 +1,20 @@
 package lotto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-
+        Application application = new Application();
+        application.buyLotterys(3);
     }
 
-    private List<Lotto> buyLottery(int count) {
-
-        return null;
+    private List<Lotto> buyLotterys(int quantity) {
+        List<Lotto> lottoSet = new ArrayList<>();
+        for (int i = 0; i < quantity; i++) {
+            lottoSet.add(new Lotto(Numbers.createRandomNumbers()));
+        }
+        return lottoSet;
     }
 
     private Integer compareNumbers(int n) {
@@ -37,7 +42,7 @@ public class Application {
         return null;
     }
 
-    private void printLotteryCountAndNumbers() {
+    private void printLotteryCountAndNumbers(int[] lottoSet) {
 
     }
 
