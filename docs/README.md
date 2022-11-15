@@ -2,20 +2,20 @@
 
 ## 구현해야 하는 기능
 1. 주요 기능
-* [] 중복되지 않는 6개의 숫자로 이뤄진 로또를 n장을 발행한다. - Application/buyLottery(int n)
-* [] 1부터 45까지 서로 다른 임의의 수 6개를 뽑는다. - Numbers/createRandomNumbers()
-  * [] 구매한 로또 숫자와 당첨 번호를 오름차순으로 정렬한다. - Numbers/sortNumbers()
+* [x] 중복되지 않는 6개의 숫자로 이뤄진 로또를 n장을 발행한다. - Application/buyLotterys(int n)
+* [x] 1부터 45까지 서로 다른 임의의 수 6개를 뽑는다. - Numbers/createRandomNumbers()
+  * [x] 구매한 로또 숫자와 당첨 번호를 오름차순으로 정렬한다. - Numbers/sortNumbers()
 * [] 사용자가 구매한 로또의 번호와 당첨 번호 사이에 몇 개가 일치하는지 비교한다. - Application/compareNumbers(int n)
 * [] 소수점 둘째 자리에서 반올림 하여 수익률을 계산한다(수익 / 투자금액 * 100). - Application/calculateRateOfReturn()
 
 2. 입력 기능
-* [] 사용자에게 1부터 45까지 서로 다른 임의의 수 6개를 당첨 번호를 입력 받는다. - Application/askWinningNumber()
-  * [] 입력 받은 6개의 숫자가 중복되지 않는지 확인한다. - Numbers/validate()
-* [] 사용자에게 1부터 45까지 1개의 보너스 번호를 입력 받는다. - Application/askBonusNumber()
-* [] 사용자에게 로또 구입 금액을 입력 받는다. - Application/askHowMuchToBuy()
+* [] 사용자에게 1부터 45까지 서로 다른 임의의 수 6개를 당첨 번호를 입력 받는다. - Input/askWinningNumber()
+  * [] 입력 받은 6개의 숫자가 중복되지 않는지 확인한다. - Input/validate()
+* [] 사용자에게 1부터 45까지 1개의 보너스 번호를 입력 받는다. - Input/askBonusNumber()
+* [] 사용자에게 로또 구입 금액을 입력 받는다. - Input/askHowMuchToBuy()
 
 3. 출력 기능
-* [] 발행한 로또 수량 및 번호를 출력한다. - Application/printLotteryCountAndNumbers()
+* [x] 발행한 로또 수량 및 번호를 출력한다. - Application/printLotteryCountAndNumbers()
 * [] 일치하는 숫자의 개수만큼 당첨 내역을 출력한다. - Application/printLotteryWinningResult()
 * [] 수익률을 출력한다. - Application/printRateOfReturn()
 
