@@ -5,11 +5,10 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        Application application = new Application();
-        application.buyLotterys(3);
+        printLotteryCountAndNumbers(buyLotterys(5));
     }
 
-    private List<Lotto> buyLotterys(int quantity) {
+    private static List<Lotto> buyLotterys(int quantity) {
         List<Lotto> lottoSet = new ArrayList<>();
         for (int i = 0; i < quantity; i++) {
             lottoSet.add(new Lotto(Numbers.createRandomNumbers()));
@@ -42,8 +41,11 @@ public class Application {
         return null;
     }
 
-    private void printLotteryCountAndNumbers(int[] lottoSet) {
-
+    private static void printLotteryCountAndNumbers(List<Lotto> lottoSet) {
+        System.out.printf("%d개를 구매했습니다.\n", lottoSet.size());
+        for (Lotto lotto : lottoSet) {
+            System.out.println(lotto);
+        }
     }
 
     private void printLotteryWinningResult() {
